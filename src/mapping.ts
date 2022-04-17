@@ -173,16 +173,14 @@ function handleAction(
 
         logs.save()
       }
-      
+
       if(outcome.logs.length == 3 && outcome.logs[0].split(' ')[0] == 'Epoch'){
         log.info("outcome log is: {}", [outcome.logs[0]])
         logs.log = outcome.logs[0]
         let firstLog = outcome.logs[0]
         let secondLog = outcome.logs[1]
         let thirdLog = outcome.logs[2]
-        let fourthLog = outcome.logs[3]
-        let fifthLog = outcome.logs[4]
-
+       
         let firstParts = firstLog.split(' ')
         logs.epoch = firstParts[1].split(':')[0]
         logs.rewardsReceived = firstParts[7]
